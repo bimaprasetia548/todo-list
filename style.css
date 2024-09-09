@@ -1,0 +1,198 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex; 
+  justify-content: center;
+}
+
+.container {
+  width: 1000px;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 20px;
+  margin-top: 40px;
+  position: relative;
+  
+}
+
+.container  h1 {
+  font-family: "Roboto";
+  font-weight: 900;
+  font-style: normal;
+  font-size: 2rem;
+}
+
+.container .add {
+  width: 100%;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.container .add input {
+  width: 250px;
+  padding: 10px 15px;
+  border-radius: 10px;
+}
+
+.container .add button {
+  padding: 10px 15px;
+  border-radius: 10px;
+  border: none;
+  background-color: #000;
+  cursor: pointer;
+}
+
+.container .add button i {
+   color: #fff;
+   font-weight: bold;
+}
+
+
+.list {
+  position: relative;
+}
+
+
+.list .item {
+  width: 310px;
+  padding: 10px 20px;
+  margin-top: 10px;
+  box-shadow: 0 0 1px #000;
+  border-radius: 12px;
+  background-color:#d4d9e2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.list.animation .item:last-child {
+  transform: translateY(-30px);
+  transition: .3s;
+  animation: move .5s linear 1 forwards;
+  opacity: 0;
+  z-index: -1;
+}
+
+.list .item p {
+  font-family: "Roboto", Sans-Serif;
+  font-weight: 400;
+  font-size: 1.1rem;
+}
+
+.list .item .edit {
+  display: flex;
+  gap: 10px;
+ 
+}
+
+.list .item .edit .ceck {
+   cursor: pointer;
+}
+.list .item .edit .delete {
+   cursor: pointer;
+}
+
+.msg .success {
+  color: green;
+  font-family: "Roboto", Sans-Serif;
+  font-weight: 400;
+  font-size: .8rem;
+}
+.msg .delete-msg {
+  color: red;
+  font-family: "Roboto", Sans-Serif;
+  font-weight: 400;
+  font-size: .8rem;
+}
+
+.ceckList {
+  text-decoration: line-through;
+  text-decoration-thickness: 2px;  
+}
+
+
+.confirm {
+  width: 225px;
+  height: 120px;
+  box-shadow: 0px 0px 1px #000, 0px 0px 1px #000;
+  border-radius: 5px;
+  padding: 20px 0;
+  background-color: #fff;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: none;
+}
+
+.confirm p {
+  font-family: "Roboto", Sans-Serif;
+  font-weight: 400;
+  font-style: normal;
+  text-align: center;
+}
+
+.confirm .btn-confirm {
+  width: 100%;
+  margin-top: 10px;
+  padding: 10px;
+  display:flex;
+  justify-content: center;
+  gap: 10px
+}
+
+.confirm .btn-confirm button {
+  padding: 8px 15px;
+  border: none;
+  border-radius: 5px;
+  font-family: "Roboto", Sans-Serif;
+  font-weight: 500;
+}
+
+
+.confirm .btn-confirm button:nth-child(2) {
+  background-color: red;
+  color: #fff;
+}
+
+.tampil {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.opacity {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 1;
+  animation: animate .5s linear 1 forwards;
+}
+@keyframes move {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes animate {
+   to {
+    transform: translateY(50px);
+    opacity: 0;
+   }
+  
+}
+
+
+@media only screen and (min-width: 768px) {
+  .container {
+    margin-top: 100px;
+  }
+}
+
